@@ -1,0 +1,96 @@
+.container {
+  height: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.footer__content {
+  background-color: #363b3e;
+  min-height: 250px;
+  height: auto;
+  display: flex;
+  padding: 30px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.signup__text, .category__text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fef7ef;
+  font-size: x-large;
+  line-height: 1.5;
+}
+
+.signup__form {
+  margin: 5% 0 2% 0;
+}
+
+.email {
+  background-color: #363b3e;
+  border: 1px solid #4e5356; /* border diff style*/
+  height: 46px;
+  width: 300px;
+  border-radius: 5px;
+  padding-left: 20px;
+  margin-bottom: 5%;
+  color: #585d61;
+}
+
+.email:focus {
+  outline: none;
+}
+.signup {
+  margin-right: 5%;
+}
+
+.signup__btn {
+  border: 1px solid #363b3e;
+  border-radius: 5px;
+  height: 50px;
+  width: 320px;
+  background-color: #2c89b5;
+  color: #fef7ef;
+  font-size: x-large;
+}
+.category__text {
+  position: relative;
+  left: 65px;
+}
+.category__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list__content {
+  list-style: none;
+  color: #91969a;
+  line-height: 2;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 25px;
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.links {
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #babbbd;
+}
+.copyright__text {
+  color: #cdced0;
+}
+.icon {
+  font-size: 30px;
+  padding-left: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    height: auto;
+  }
+  .footer__content {
+    flex-direction: column;
+  }
+}
