@@ -49,9 +49,9 @@ input:focus {
 
 .icon__down {
   position: relative;
-  top: 2px;
-  left: 6px;
-  font-size: 15px;
+  top: 0.7px;
+  left: 8px;
+  font-size: 18px;
 }
 
 .search__icon {

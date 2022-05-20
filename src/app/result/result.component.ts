@@ -1,4 +1,4 @@
-import { SearchResponse } from './../interface/search.interface';
+import { ISearchResponse } from './../interface/search.interface';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -6,13 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './result.component.html',
   styleUrls: ['./result.component.css']
 })
-export class ResultComponent implements OnInit {
+export class ResultComponent {
 
-  @Input("data") data: SearchResponse;
-  constructor() { }
-
-  ngOnInit() {
-
-  }
+  @Input("data") searchResult: ISearchResponse;
 
 }

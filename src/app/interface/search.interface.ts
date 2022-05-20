@@ -1,21 +1,21 @@
-export interface SearchResponse {
-  data: GipData[];
-  pagination:  Pagination;
-  meta: Meta;
+export interface ISearchResponse {
+  data: IGifData[];
+  pagination: IPagination;
+  meta: IMeta;
 }
-export interface Meta {
+export interface IMeta {
   status: number;
   msg: string;
   response_id: string;
 }
 
-export interface Pagination {
+export interface IPagination {
   total_count: number;
   count: number;
   offset: number;
 }
 
-export interface GipData {
+export interface IGifData {
   type: string;
   id: string;
   url: string;
@@ -34,55 +34,62 @@ export interface GipData {
   import_datetime: string;
   trending_datetime: string;
   images: Images;
+  user?: IUser;
   analytics_response_payload: string;
-  analytics: Analytics;
+  analytics: IAnalytics;
 }
 
-export interface Analytics {
-  onload: OnLoad;
-  onclick: OnClick;
-  onsent: OnSent;
+export interface IAnalytics {
+  onload: IUrl;
+  onclick: IUrl;
+  onsent: IUrl;
 }
 
-export interface OnLoad {
+export interface IUrl {
   url: string;
 }
 
-export interface OnClick {
-  url: string;
-}
-
-export interface OnSent {
-  url: string;
+export interface IUser {
+  avatar_url: string;
+  banner_image: string;
+  banner_url: string;
+  profile_url: string;
+  username: string;
+  display_name: string;
+  description: string;
+  instagram_url: string;
+  website_url: string;
+  is_verified: true
 }
 
 export interface Images {
-    original: Original;
-    downsized: FourPropsURL;
-    downsized_large: FourPropsURL;
-    downsized_medium: FourPropsURL;
-    downsized_small: FourPropsMp4;
-    downsized_still: FourPropsURL;
-    fixed_height: FixedHeight;
-    fixed_height_downsampled: FixedHeightDownSample;
-    fixed_height_small: FixedHeight;
-    fixed_height_small_still: FourPropsURL;
-    fixed_height_still: FourPropsURL;
-    fixed_width: FixedHeight;
-    fixed_width_downsampled: FixedHeightDownSample;
-    fixed_width_small: FixedHeight;
-    fixed_width_small_still: FourPropsURL;
-    fixed_width_still: FourPropsURL;
-    looping: Looping;
-    original_still: FourPropsURL;
-    original_mp4: FourPropsMp4;
-    preview: FourPropsMp4;
-    preview_gif: FourPropsURL;
-    preview_webp: FourPropsURL;
-    ["480w_still"]: FourPropsURL;
+    original: IOriginal;
+    downsized: IFourPropsURL;
+    downsized_large: IFourPropsURL;
+    downsized_medium: IFourPropsURL;
+    downsized_small: IFourPropsMp4;
+    downsized_still: IFourPropsURL;
+    fixed_height: IFixedHeight;
+    fixed_height_downsampled: IFixedHeightDownSample;
+    fixed_height_small: IFixedHeight;
+    fixed_height_small_still: IFourPropsURL;
+    fixed_height_still: IFourPropsURL;
+    fixed_width: IFixedHeight;
+    fixed_width_downsampled: IFixedHeightDownSample;
+    fixed_width_small: IFixedHeight;
+    fixed_width_small_still: IFourPropsURL;
+    fixed_width_still: IFourPropsURL;
+    looping: ILooping;
+    original_still: IFourPropsURL;
+    original_mp4: IFourPropsMp4;
+    preview: IFourPropsMp4;
+    preview_gif: IFourPropsURL;
+    preview_webp: IFourPropsURL;
+    hd?: IFourPropsMp4;
+    ["480w_still"]: IFourPropsURL;
 }
 
-export interface Original {
+export interface IOriginal {
   height: string;
   width: string;
   size: string;
@@ -95,21 +102,21 @@ export interface Original {
   hash: string;
 }
 
-export interface FourPropsURL {
+export interface IFourPropsURL {
   height: string;
   width: string;
   size: string;
   url: string;
 }
 
-export interface FourPropsMp4 {
+export interface IFourPropsMp4 {
   height: string;
   width: string;
   mp4_size: string;
   mp4: string;
 }
 
-export interface FixedHeight {
+export interface IFixedHeight {
   height: string;
   width: string;
   size: string;
@@ -120,7 +127,7 @@ export interface FixedHeight {
   webp: string;
 }
 
-export interface FixedHeightDownSample {
+export interface IFixedHeightDownSample {
   height: string;
   width: string;
   size: string;
@@ -129,7 +136,7 @@ export interface FixedHeightDownSample {
   webp: string;
 }
 
-export interface Looping {
+export interface ILooping {
   mp4_size: string;
   mp4: string;
 }

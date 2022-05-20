@@ -1,20 +1,20 @@
-<div class="search">
+<section class="search">
   <header class="align__content header__text">
     <h1>Gif Search</h1>
   </header>
   <form class="align__content search__form" #searchForm="ngForm" (ngSubmit)="search(searchForm)" novalidate>
     <input class="search__input" type="text" placeholder="What are you looking for?" name="searchInput" ngModel>
     <button type="submit" class="submit__btn">
-      Show All<i class="bi bi-caret-down-fill icon__down"></i>
+      Show All<i class="fa-solid fa-caret-down icon__down"></i>
     </button>
     <span class="search__icon" (click)="search(searchForm)">
-      <i class="bi bi-search align__content icon__align"></i>
+      <i class="fa-solid fa-magnifying-glass align__content icon__align"></i>
     </span>
   </form>
   <div class="align__content search__text">
     You can search any gif with our search
   </div>
   <div class="align__content search__desc">
-    Everything you need for your creative projects.websites, banners, presentations, magazines and advertising.
+    Everything you need for your creative projects, websites, banners, presentations, magazines and advertising.
   </div>
-</div>
+</section>
