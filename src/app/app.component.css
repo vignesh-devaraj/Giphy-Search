@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   gap: 14px;
-  margin-bottom: 15px;
+  margin: 5px 0 15px 0;
 }
 .dot {
   width: 15px;
