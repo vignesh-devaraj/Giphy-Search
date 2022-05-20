@@ -15,46 +15,30 @@
         <span>Browse by categories</span>
       </div>
       <div class="category__content">
-        <ul class="list__content">
-          <li>Graphics</li>
-          <li>PSDs</li>
-          <li>Icons</li>
-          <li>Templates</li>
-          <li>Themese</li>
-        </ul>
-        <ul class="list__content">
-          <li>Addons</li>
-          <li>Fonts</li>
-          <li>Textures</li>
-          <li>Patterns</li>
-          <li>Backgrounds</li>
-        </ul>
-        <ul class="list__content">
-          <li>Buttons</li>
-          <li>Form</li>
-          <li>Gui</li>
-          <li>Navigation</li>
-          <li>UI kits</li>
-        </ul>
-        <ul class="list__content">
-          <li>Infographics</li>
-          <li>Graphs</li>
-          <li>Logos</li>
-          <li>Vectors</li>
-          <li>Business Cards</li>
+        <ul class="list__content" *ngFor="let category of categoriesData">
+          <li *ngFor="let item of category"><a href="#{{item}}">{{item}}</a></li>
         </ul>
       </div>
     </div>
   </div>
   <div class="copyright">
     <div class="copyright__content">
-      <span class="links">Affiliates  /  Contributors  /  Press/Media  /  Careers  /  About  /  Contact</span>
+      <div class="contents">
+        <span class="links">Affiliates</span> <span class="links">/</span>
+        <span class="links">Contributors</span><span class="links">/</span>
+        <span class="links">Press/Media</span><span class="links">/</span>
+        <span class="links">Careers</span><span class="links">/</span>
+        <span class="links">About</span><span class="links">/</span>
+        <span class="links">Contact</span>
+      </div>
       <br>
-      <p class="copyright__text">Copyright 2018 myCompany All rights reserved</p>
+      <p class="copyright__text">Copyright © 2018 myCompany All rights reserved</p>
     </div>
     <div class="copyright__icons">
-      <i class="bi bi-facebook icon"></i>
-      <i class="bi bi-twitter icon"></i>
+      <i class="fa-brands fa-facebook icon"></i>
+      <i class="fa-brands fa-twitter-square icon"></i>
+      <i class="fa-brands fa-google-plus-g icon"></i>
+      <i class="fa-solid fa-rss icon"></i>
     </div>
   </div>
 </div>

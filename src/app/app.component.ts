@@ -1,3 +1,4 @@
+import { SearchResponse } from './interface/search.interface';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
@@ -15,17 +16,31 @@ export class AppComponent {
   rating="g";
   lang="en";
   random_id="asdqweasd";
+  searchResponse: SearchResponse;
+  isLoading: boolean;
+  isInitialLoad = true;
   constructor(private http: HttpClient) {}
 
   updateSearchValue(searchValue): void {
     this.searchInput = searchValue;
     console.log(this.searchInput);
+    this.isInitialLoad = false;
+    this.isLoading = true;
+    this.searchResponse = null;
     this.getData();
   }
 
   getData() {
     this.http.get(
       `${this.url}?q=${this.searchInput}&rating=${this.rating}&api_key=${this.api_key}`
-      ).subscribe( data => console.log(data))
+      ).subscribe(
+        (data: SearchResponse) => {
+          this.searchResponse = data;
+          setTimeout(() => this.isLoading = false,0);
+        },
+        (error) => {
+          this.isLoading = false;
+        }
+      )
   }
 }

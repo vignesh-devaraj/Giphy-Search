@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  categoriesData = [
+    ["Graphics","PSDs","Icons","Templates","Themese",],
+    ["Addons","Fonts","Textures","Patterns","Backgrounds",],
+    ["Buttons","Form","Gui","Navigation","UI kits",],
+    ["Infographics","Graphs","Logos","Vectors","Business Cards",]
+  ];
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {  }
 
 }

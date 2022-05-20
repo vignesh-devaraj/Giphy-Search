@@ -1,19 +1,17 @@
 .container {
   height: auto;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .footer__content {
   background-color: #363b3e;
-  min-height: 250px;
+  min-height: 300px;
   height: auto;
   display: flex;
   padding: 30px;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .signup__text, .category__text {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #fef7ef;
   font-size: x-large;
   line-height: 1.5;
@@ -38,59 +36,85 @@
   outline: none;
 }
 .signup {
-  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
 }
 
 .signup__btn {
   border: 1px solid #363b3e;
   border-radius: 5px;
   height: 50px;
-  width: 320px;
+  width: 327px;
   background-color: #2c89b5;
   color: #fef7ef;
   font-size: x-large;
 }
 .category__text {
   position: relative;
-  left: 65px;
+  left: 37px;
 }
 .category__content {
   display: flex;
   flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
 }
 .list__content {
   list-style: none;
   color: #91969a;
   line-height: 2;
   font-size: 14px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-left: 25px;
+}
+.list__content a {
+  text-decoration: none;
+  color: #91969a;
 }
 
 .copyright {
+  min-height: 80px;
   display: flex;
   justify-content: space-between;
   padding: 30px;
+  /* color: #ffffff; */
+}
+.contents {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #919496;
+  font-weight: bold;
 }
 
 .links {
-  font-size: medium;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #babbbd;
+  /* font-size: 14px;
+  color: #babbbd; */
 }
 .copyright__text {
-  color: #cdced0;
+  color: #d0d1d4;
 }
 .icon {
   font-size: 30px;
-  padding-left: 5px;
+  padding-left: 15px;
+}
+.icon:last-child {
+  font-size: 28px;
+  position: relative;
+  bottom: 3px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .footer {
     height: auto;
   }
   .footer__content {
     flex-direction: column;
+  }
+  .category__content {
+    gap: 20px;
+  }
+  .contents {
+    gap: 10px;
   }
 }

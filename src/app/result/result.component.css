@@ -1,0 +1,21 @@
+.result {
+  height: auto;
+  min-height: 100px;
+  /* background-color: #fef7ef; */
+  padding: 30px;
+}
+
+.modal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.no__data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
