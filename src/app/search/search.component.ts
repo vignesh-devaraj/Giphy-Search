@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ISearchInput } from '../interface/search.interface';
 
 @Component({
   selector: 'app-search',
@@ -9,13 +10,13 @@ import { NgForm } from '@angular/forms';
 export class SearchComponent {
 
   constructor() { }
-  @Output() searchValue: EventEmitter<string> = new EventEmitter<string>();
-
-  search(searchForm: NgForm): void {
-    const searchInput = searchForm.value.searchInput;
-    if(searchInput) {
-      this.searchValue.emit(searchInput);
-    }
+  @Output() searchValue: EventEmitter<ISearchInput> = new EventEmitter<ISearchInput>();
+  inputData: ISearchInput = {
+    searchValue: "",
+    limit: 50
+  }
+  search(): void {
+    this.searchValue.emit(this.inputData);
   }
 
 }

@@ -1,3 +1,8 @@
+export interface ISearchInput {
+  searchValue: string;
+  limit: number;
+}
+
 export interface ISearchResponse {
   data: IGifData[];
   pagination: IPagination;

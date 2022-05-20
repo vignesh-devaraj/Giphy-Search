@@ -2,11 +2,14 @@
   <header class="align__content header__text">
     <h1>Gif Search</h1>
   </header>
-  <form class="align__content search__form" #searchForm="ngForm" (ngSubmit)="search(searchForm)" novalidate>
-    <input class="search__input" type="text" placeholder="What are you looking for?" name="searchInput" ngModel>
-    <button type="submit" class="submit__btn">
-      Show All<i class="fa-solid fa-caret-down icon__down"></i>
-    </button>
+  <form class="align__content search__form" #searchForm="ngForm" (ngSubmit)="search()" novalidate>
+    <input class="search__input" type="text" placeholder="What are you looking for?" name="searchInput"
+      [(ngModel)]="inputData.searchValue">
+    <select class="select__limit" name="limit" [(ngModel)]="inputData.limit">
+      <option value="10">10</option>
+      <option value="10">30</option>
+      <option value="50">Show All</option>
+    </select>
     <span class="search__icon" (click)="search(searchForm)">
       <i class="fa-solid fa-magnifying-glass align__content icon__align"></i>
     </span>

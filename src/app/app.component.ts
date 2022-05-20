@@ -1,4 +1,4 @@
-import { ISearchResponse } from './interface/search.interface';
+import { ISearchInput, ISearchResponse } from './interface/search.interface';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { SearchService } from './service/search.service';
@@ -9,7 +9,7 @@ import { SearchService } from './service/search.service';
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  searchInput: string;
+  searchInput: ISearchInput;
   limit: number = 50;
   rating: string = "g";
   lang: string = "en";
@@ -20,17 +20,20 @@ export class AppComponent {
 
   constructor(private searchService: SearchService) {}
 
-  updateSearchValue(searchValue): void {
-    this.searchInput = searchValue;
-    this.isInitialLoad = false;
-    this.isLoading = true;
-    this.isError = false;
+  updateSearchValue(inputData: ISearchInput): void {
+    this.searchInput = inputData;
     this.searchResponse = null;
-    this.getData();
+    this.isInitialLoad = true;
+    if(inputData.searchValue) {
+      this.isInitialLoad = false;
+      this.isLoading = true;
+      this.isError = false;
+      this.getData();
+    }
   }
 
   getData(): void {
-    this.searchService.getData(this.searchInput, this.rating, this.limit)
+    this.searchService.getData(this.searchInput.searchValue, this.rating, this.searchInput.limit)
       .subscribe(
         (data: ISearchResponse) => {
           this.searchResponse = data;

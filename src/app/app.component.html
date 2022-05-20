@@ -2,12 +2,12 @@
   <section class="search">
     <app-search (searchValue)="updateSearchValue($event)"></app-search>
   </section>
-  <section class="search__text" *ngIf="isInitialLoad">
+  <div class="search__text" *ngIf="isInitialLoad">
     <h2>Let's search something to get awesome Gifs</h2>
-  </section>
-  <section class="search__text" *ngIf="isError">
+  </div>
+  <div class="search__text" *ngIf="isError">
     <h2>Something went wrong...Try again later.</h2>
-  </section>
+  </div>
   <section class="loader" *ngIf="isLoading">
     <span class="dot"></span>
     <span class="dot"></span>

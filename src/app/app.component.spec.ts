@@ -56,7 +56,7 @@ describe('AppComponent', () => {
 
   it("should check the updateSearchValue function", () => {
     spyOn(component, "getData");
-    component.updateSearchValue("google");
+    component.updateSearchValue({searchValue: "google", limit: 10});
     expect(component.isInitialLoad).toBeFalsy();
     expect(component.isLoading).toBeTruthy();
     expect(component.isError).toBeFalsy();
@@ -64,6 +64,7 @@ describe('AppComponent', () => {
   })
 
   it("should check the getData function", () => {
+    component.updateSearchValue({searchValue: "google", limit: 10});
     component.getData();
     expect(component.searchResponse.data.length).toBe(5);
   });
