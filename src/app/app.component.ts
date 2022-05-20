@@ -10,7 +10,7 @@ import { SearchService } from './service/search.service';
 })
 export class AppComponent {
   searchInput: string;
-  limit: number = 5;
+  limit: number = 50;
   rating: string = "g";
   lang: string = "en";
   searchResponse: ISearchResponse;
