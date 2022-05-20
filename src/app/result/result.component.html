@@ -1,7 +1,7 @@
 <div class="result">
   <div class="modal">
     <div class="img__display" *ngFor="let image of data?.data">
-      <img src="{{image.images.fixed_height.url}}" alt="Image">
+      <img class="img__result" src="{{image.images.fixed_width.url}}" alt="Image">
     </div>
   </div>
   <div class="no__data" *ngIf="data?.data.length === 0">

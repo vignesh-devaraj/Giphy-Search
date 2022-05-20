@@ -3,7 +3,7 @@
     <h1>Gif Search</h1>
   </header>
   <form class="alignContent search__form" #searchForm="ngForm" (ngSubmit)="search(searchForm)" novalidate>
-    <input type="text" placeholder="What are you looking for?" name="searchInput" ngModel>
+    <input class="search__input" type="text" placeholder="What are you looking for?" name="searchInput" ngModel>
     <button type="submit" class="submit__btn">
       Show All<i class="bi bi-caret-down-fill icon__down"></i>
     </button>

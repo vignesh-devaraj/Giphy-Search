@@ -75,7 +75,6 @@
   display: flex;
   justify-content: space-between;
   padding: 30px;
-  /* color: #ffffff; */
 }
 .contents {
   display: flex;
@@ -87,9 +86,9 @@
   font-weight: bold;
 }
 
-.links {
-  /* font-size: 14px;
-  color: #babbbd; */
+.links a{
+  text-decoration: none;
+  color: #919496;
 }
 .copyright__text {
   color: #d0d1d4;
@@ -97,6 +96,7 @@
 .icon {
   font-size: 30px;
   padding-left: 15px;
+  cursor: pointer;
 }
 .icon:last-child {
   font-size: 28px;

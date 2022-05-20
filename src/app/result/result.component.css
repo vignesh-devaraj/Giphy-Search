@@ -1,8 +1,8 @@
 .result {
   height: auto;
   min-height: 100px;
-  /* background-color: #fef7ef; */
   padding: 30px;
+  margin: 2% 0 2% 0;
 }
 
 .modal {
