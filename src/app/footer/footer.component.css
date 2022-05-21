@@ -1,6 +1,7 @@
 .container {
   height: auto;
 }
+
 .footer__content {
   background-color: #363b3e;
   min-height: 300px;
@@ -11,9 +12,10 @@
   align-items: center;
 }
 
-.signup__text, .category__text {
+.signup__text,
+.category__text {
   color: #fef7ef;
-  font-size: x-large;
+  font-size: 24px;
   line-height: 1.5;
 }
 
@@ -23,7 +25,7 @@
 
 .email {
   background-color: #363b3e;
-  border: 1px solid #4e5356; /* border diff style*/
+  border: 1px solid #4e5356;
   height: 46px;
   width: 300px;
   border-radius: 5px;
@@ -35,6 +37,7 @@
 .email:focus {
   outline: none;
 }
+
 .signup {
   display: flex;
   flex-direction: column;
@@ -47,24 +50,28 @@
   width: 327px;
   background-color: #2c89b5;
   color: #fef7ef;
-  font-size: x-large;
+  font-size: 24px;
 }
+
 .category__text {
   position: relative;
   left: 37px;
 }
+
 .category__content {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
   justify-content: space-between;
 }
+
 .list__content {
   list-style: none;
   color: #91969a;
   line-height: 2;
   font-size: 14px;
 }
+
 .list__content a {
   text-decoration: none;
   color: #91969a;
@@ -76,28 +83,32 @@
   justify-content: space-between;
   padding: 30px;
 }
-.contents {
+
+.content__links {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 50px 20px;
   flex-wrap: wrap;
   font-size: 14px;
   color: #919496;
   font-weight: bold;
 }
 
-.links a{
+.links a {
   text-decoration: none;
   color: #919496;
 }
+
 .copyright__text {
   color: #d0d1d4;
 }
+
 .icon {
   font-size: 30px;
   padding-left: 15px;
   cursor: pointer;
 }
+
 .icon:last-child {
   font-size: 28px;
   position: relative;
@@ -108,13 +119,38 @@
   .footer {
     height: auto;
   }
+
   .footer__content {
     flex-direction: column;
   }
-  .category__content {
-    gap: 20px;
+
+  .signup {
+    margin-bottom: 15px;
   }
-  .contents {
-    gap: 10px;
+
+  .signup__text {
+    text-align: center;
+  }
+
+  .category__content {
+    gap: 10px 10px;
+    justify-content: flex-start;
+  }
+
+  .list__content {
+    font-size: 16px;
+  }
+
+  .copyright {
+    padding: 20px;
+  }
+
+  .content__links {
+    justify-content: flex-start;
+    gap: 10px 7px;
+  }
+
+  .icon {
+    padding-bottom: 8px;
   }
 }
