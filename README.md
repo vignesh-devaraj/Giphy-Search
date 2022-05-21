@@ -1,6 +1,9 @@
 # Giphy Search
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
+The project is about searching gifs and images. 
+It was built on [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
+
+# Previews
 
 ## Development server
 
