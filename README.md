@@ -3,7 +3,10 @@
 The project is about searching gifs and images. 
 It was built on [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
 
-# Previews
+Live - https://search-giphy-vignesh.netlify.app/
+
+# Preview
+![Giphy Search](https://user-images.githubusercontent.com/96184764/169695523-349bd420-644e-4d76-9376-6dcf458affff.gif)
 
 ## Development server
 
@@ -28,3 +31,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# Resources
+[Giphy Api](https://developers.giphy.com/)
+
+[Font Awesome](https://fontawesome.com/)
