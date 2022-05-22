@@ -24,9 +24,9 @@
   <section class="copyright">
     <section class="copyright__content">
       <div class="content__links">
-        <span class="links" *ngFor="let link of copyRightLinks">
+        <span class="links" *ngFor="let link of copyRightLinks; let last = last">
           <a href="#{{link}}">{{link}}</a>
-          <span>/</span>
+          <span *ngIf="!last">/</span>
         </span>
       </div>
       <br>
