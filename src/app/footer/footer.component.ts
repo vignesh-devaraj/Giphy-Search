@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { IFooterIcons } from "../interface/search.interface";
 
 @Component({
   selector: "app-footer",
@@ -22,10 +23,10 @@ export class FooterComponent {
     "Contact",
   ];
 
-  copyRightIcons: string[] = [
-    "fa-brands fa-facebook icon",
-    "fa-brands fa-twitter-square icon",
-    "fa-brands fa-google-plus-g icon",
-    "fa-solid fa-rss icon",
+  copyRightIcons: IFooterIcons[] = [
+    { iconClass: "fa-brands fa-facebook icon", iconLink: "#Facebook" },
+    { iconClass: "fa-brands fa-twitter-square icon", iconLink: "#Twitter" },
+    { iconClass: "fa-brands fa-google-plus-g icon", iconLink: "#Google+" },
+    { iconClass: "fa-solid fa-rss icon", iconLink: "#Feed" },
   ];
 }

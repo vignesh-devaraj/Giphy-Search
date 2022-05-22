@@ -33,7 +33,9 @@
       <p class="copyright__text">Copyright © 2018 myCompany All rights reserved</p>
     </section>
     <section class="copyright__icons">
-      <i *ngFor="let icon of copyRightIcons" [ngClass]="icon"></i>
+      <a *ngFor="let icon of copyRightIcons" href="{{icon.iconLink}}">
+        <i [ngClass]="icon.iconClass"></i>
+      </a>
     </section>
   </section>
 </footer>

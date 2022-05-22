@@ -109,6 +109,11 @@
   color: #d0d1d4;
 }
 
+.copyright__icons a {
+  text-decoration: none;
+  color: black;
+}
+
 .icon {
   font-size: 30px;
   padding-left: 15px;

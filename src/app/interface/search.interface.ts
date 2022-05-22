@@ -145,3 +145,8 @@ export interface ILooping {
   mp4_size: string;
   mp4: string;
 }
+
+export interface IFooterIcons {
+  iconClass: string;
+  iconLink: string;
+}
