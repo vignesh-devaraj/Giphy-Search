@@ -1,4 +1,4 @@
-<section class="footer">
+<footer class="footer">
   <section class="footer__content">
     <section class="signup">
       <div class="signup__text">
@@ -21,24 +21,19 @@
       </div>
     </section>
   </section>
-  <footer class="copyright">
+  <section class="copyright">
     <section class="copyright__content">
       <div class="content__links">
-        <span class="links"><a href="#Affiliates">Affiliates</a></span> <span class="links">/</span>
-        <span class="links">Contributors</span><span class="links">/</span>
-        <span class="links">Press / Media</span><span class="links">/</span>
-        <span class="links">Careers</span><span class="links">/</span>
-        <span class="links">About</span><span class="links">/</span>
-        <span class="links">Contact</span>
+        <span class="links" *ngFor="let link of copyRightLinks">
+          <a href="#{{link}}">{{link}}</a>
+          <span>/</span>
+        </span>
       </div>
       <br>
       <p class="copyright__text">Copyright © 2018 myCompany All rights reserved</p>
     </section>
     <section class="copyright__icons">
-      <i class="fa-brands fa-facebook icon"></i>
-      <i class="fa-brands fa-twitter-square icon"></i>
-      <i class="fa-brands fa-google-plus-g icon"></i>
-      <i class="fa-solid fa-rss icon"></i>
+      <i *ngFor="let icon of copyRightIcons" [ngClass]="icon"></i>
     </section>
-  </footer>
-</section>
+  </section>
+</footer>
