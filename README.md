@@ -5,8 +5,8 @@ It was built on [Angular CLI](https://github.com/angular/angular-cli) version 8.
 
 Live - https://search-giphy-vignesh.netlify.app/
 
-# Preview
-![Giphy Search](https://user-images.githubusercontent.com/96184764/169695523-349bd420-644e-4d76-9376-6dcf458affff.gif)
+## Preview
+![Giphy Search](https://user-images.githubusercontent.com/96184764/169695899-e490f775-c3a6-4e97-b655-409765c2d105.gif)
 
 ## Development server
 
